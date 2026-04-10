@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Tried Stone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts (FIXED) -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">TS</a>
+    </div>
+
+    <div class="title">The Tried Stone</div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <img src="images/TallStack.jpg" alt="Nature" class="side">
+    <img src="images/Sunset1.jpg" alt="Nature" class="center">
+    <img src="images/Bigblock.jpg" alt="Nature" class="side">
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <h2>Welcome to The Tried Stone</h2>
+    <p>This is your local preview in the earth-tone theme. Once you have images, this section will really come to life.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-bottom">
+    <p><strong>The Tried Stone</strong></p>
+    <p>📞 (918) 413-4954</p>
+    <p>📧 <a href="mailto:setapart@thetriedstone.com">setapart@thetriedstone.com</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="png/mylogo.png" alt="My Personal Logo">
+    <div class="logo-year">2026</div>
+  </footer>
+
+</body>
+</html>
+
+<!-- Carousel -->
+<div class="carousel">
+  <img class="active" src="images/Bigblock.jpg" alt="Bigblock">
+  <img src="images/Naturalledge.jpg" alt="Naturalledge">
+  <img src="images/Sunset1.jpg" alt="Sunset1">
+</div>
+
+<script>
+let images = document.querySelectorAll(".carousel img");
+let index = 0;
+
+setInterval(() => {
+  images[index].classList.remove("active");
+  index = (index + 1) % images.length;
+  images[index].classList.add("active");
+}, 5000);
+</script>
+
+
+<!-- Carousel -->
+<div class="carousel">
+  <img class="active" src="images/Bigblock.jpg" alt="Bigblock">
+  <img src="images/Naturalledge.jpg" alt="Naturalledge">
+  <img src="images/Sunset1.jpg" alt="Sunset1">
+</div>
+
+<script>
+let images = document.querySelectorAll(".carousel img");
+let index = 0;
+
+setInterval(() => {
+  images[index].classList.remove("active");
+  index = (index + 1) % images.length;
+  images[index].classList.add("active");
+}, 5000);
+</script>
+
