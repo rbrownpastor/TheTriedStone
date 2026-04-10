@@ -12,23 +12,26 @@
 <body>
 
 <!-- HEADER -->
-<header class="topbar">
+<header class="header">
 
   <div class="left">
-    <img src="" alt="TTS">
+    TTS
   </div>
 
-  <div class="center">
-    THE TRIED STONE
-  </div>
+  <h1>THE TRIED STONE</h1>
 
-  <div class="right">
+  <div class="menu" onclick="toggleMenu()">
     ☰
   </div>
 
 </header>
 
-</header>
+<!-- NAV MENU -->
+<nav class="nav-links" id="nav">
+  <a href="#">Home</a>
+  <a href="#">Gallery</a>
+  <a href="#">Contact</a>
+</nav>
 
 <!-- HERO / CAROUSEL -->
 <section class="hero">
@@ -40,7 +43,7 @@
   </div>
 
   <div class="script">
-    <p> Coming soon-Gallery and Products.
+    <p>Coming soon - Gallery and Products.</p>
     <p>“A tried stone, a precious cornerstone, a sure foundation.”</p>
   </div>
 
@@ -49,7 +52,14 @@
 <!-- FOOTER -->
 <footer class="footer">
   <img src="png/mylogo.png" alt="Footer Logo">
-  </footer>
+</footer>
+
+<!-- MENU SCRIPT -->
+<script>
+function toggleMenu() {
+  document.getElementById("nav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
