@@ -1,203 +1,105 @@
-/* =========================================================
-   RESET
-========================================================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================================================
-   BODY
-========================================================= */
+/* ================= BODY ================= */
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f5f1e8;
-  color: #2e2e2e;
+  background: #f8f8f8;
 }
 
-/* =========================================================
-   HEADER (TOP BAR)
-========================================================= */
+/* ================= HEADER ================= */
 .header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-
-  background-color: #3b2f2f;
-  padding: 14px 20px;
-  border-bottom: 2px solid #5a432d;
-}
-
-/* LEFT (LOGO / TTS) */
-.header .left {
-  justify-self: start;
-  color: #f5f1e8;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-/* CENTER TITLE */
-.header h1 {
-  justify-self: center;
-  text-align: center;
-  color: #f5f1e8;
-
-  font-size: 34px;
-  letter-spacing: 4px;
-  font-weight: 600;
-}
-
-/* RIGHT (HAMBURGER MENU) */
-.header .menu {
-  justify-self: end;
-  font-size: 28px;
-  color: #f5f1e8;
-  cursor: pointer;
-}
-
-/* =========================================================
-   NAV MENU (DROPDOWN)
-========================================================= */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  background-color: #3b2f2f;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.nav-links a {
-  padding: 12px;
-  color: #ffffff;
-  text-decoration: none;
-  border-top: 1px solid #5a432d;
-}
-
-.nav-links a:hover {
-  background-color: #5a432d;
-}
-
-.nav-links.active {
+  background: #5a3e2b;
+  color: white;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
 }
 
-/* =========================================================
-   HERO SECTION
-========================================================= */
-.hero {
-  padding: 20px 10px;
+/* Left - TTS */
+.logo {
+  font-weight: bold;
+  font-size: 18px;
 }
 
-/* =========================================================
-   CAROUSEL (3 IMAGE ROW)
-========================================================= */
+/* Center - Title */
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+/* Right - Menu */
+.menu {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: white;
+  color: black;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover {
+  background: #eee;
+}
+
+/* Show menu on hover */
+.menu:hover .dropdown {
+  display: block;
+}
+
+/* ================= CAROUSEL ================= */
 .carousel {
   display: flex;
-  flex-wrap: nowrap;          /* NEVER wrap */
-  justify-content: center;
-  align-items: center;
-
-  gap: 15px;
-  max-width: 100%;
-  overflow: hidden;
+  gap: 10px;
+  padding: 15px;
+  overflow-x: auto;
 }
 
-/* ALL IMAGES */
 .carousel img {
-  border-radius: 12px;
+  width: 33%;
+  max-height: 250px;
   object-fit: cover;
-
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
+  border-radius: 6px;
 }
 
-/* SIDE IMAGES */
-.carousel .side {
-  width: 22%;
-  max-width: 220px;
-  height: 260px;
-  opacity: 0.75;
-}
-
-/* CENTER IMAGE */
-.carousel .hero-img {
-  width: 36%;
-  max-width: 360px;
-  height: 300px;
-
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-}
-
-/* =========================================================
-   BODY TEXT / SCRIPT
-========================================================= */
-.script {
+/* ================= CONTENT ================= */
+.content {
   text-align: center;
-  margin: 30px auto;
-
+  padding: 30px 15px;
   font-size: 18px;
-  line-height: 1.5;
-  max-width: 600px;
 }
 
-/* =========================================================
-   FOOTER (BOTTOM BAR)
-========================================================= */
+/* ================= FOOTER ================= */
 .footer {
-  background-color: #3b2f2f;
-  text-align: center;
-
-  padding: 14px;
-  margin-top: 50px;
-
-  border-top: 2px solid #5a432d;
+  background: #5a3e2b;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
 }
 
-/* FOOTER LOGO (SIGNATURE) */
 .footer img {
-  height: 26px;
-  opacity: 0.85;
-}
-
-/* =========================================================
-   MOBILE RESPONSIVE
-========================================================= */
-@media (max-width: 768px) {
-
-  /* HEADER */
-  .header h1 {
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
-
-  .header .left {
-    font-size: 14px;
-  }
-
-  .header .menu {
-    font-size: 24px;
-  }
-
-  /* CAROUSEL */
-  .carousel {
-    gap: 8px;
-  }
-
-  .carousel .side {
-    width: 28%;
-    height: 120px;
-  }
-
-  .carousel .hero-img {
-    width: 40%;
-    height: 140px;
-  }
-
-  /* TEXT */
-  .script {
-    font-size: 14px;
-    padding: 0 10px;
-  }
+  height: 40px;
+  width: auto;
 }
