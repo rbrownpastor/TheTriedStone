@@ -12,35 +12,71 @@ body {
   color: #2e2e2e;
 }
 
-/* ================= HEADER ================= */
+/* ================= HEADER (FORCED FIX) ================= */
+
 .header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex !important;
+  justify-content: space-between;
   align-items: center;
-  background-color: #3b2f2f;
-  padding: 12px 20px;
+
+  background-color: #5a3e2b;
+  padding: 15px 20px;
+  color: white;
 }
 
-.header .left {
-  color: #f5f1e8;
+/* LEFT */
+.left {
   font-weight: bold;
-  font-size: 20px;
 }
 
-.header h1 {
-  text-align: center;
-  color: #f5f1e8;
-  font-size: 28px;
-  letter-spacing: 3px;
+/* CENTER */
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: nowrap;
 }
 
-.header .menu {
-  justify-self: end;
-  font-size: 28px;
-  color: #f5f1e8;
+/* RIGHT */
+.right {
+  position: relative;
+  font-size: 26px;
   cursor: pointer;
 }
 
+/* DROPDOWN */
+.menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 35px;
+
+  background: white;
+  color: black;
+  min-width: 140px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  background: #eee;
+}
+
+/* SHOW MENU ON HOVER */
+.right:hover .menu {
+  display: block;
+}
 /* ================= NAV ================= */
 .nav-links {
   display: none;
