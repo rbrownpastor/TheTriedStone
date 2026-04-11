@@ -2,18 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tried Stone</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
   <title>The Tried Stone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,51 +11,46 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="left">TTS</div>
 
-  <div class="logo">
-    TTS
-  </div>
+    <h1>The Tried Stone</h1>
 
-  <div class="title">
-    THE TRIED STONE
-  </div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+  </header>
 
-  <div class="menu">
-    ☰
-    <div class="dropdown">
-      <a href="#">Home</a>
-      <a href="#">Contact</a>
-      <a href="#">Gallery</a>
+  <!-- NAV -->
+  <nav class="nav-links" id="nav">
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="carousel">
+      <img class="side" src="BigBlock.jpg" alt="BigBlock">
+      <img class="hero-img" src="Sunset.jpg" alt="Sunset">
+      <img class="side" src="ExposedStack.jpg" alt="Exposed Stack">
     </div>
-  </div>
 
-</header>
+    <div class="script">
+      <p>Coming soon - Gallery and Products.</p>
+      <p>“A tried stone, a precious cornerstone, a sure foundation.”</p>
+    </div>
+  </section>
 
-<!-- ================= CAROUSEL ================= -->
-<section class="carousel">
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="png/mylogo.png" alt="logo">
+  </footer>
 
-  <img src="BigBlock.jpg" alt="Big Block">
-  <img src="Sunset.jpg" alt="Sunset">
-  <img src="ExposedStack.jpg" alt="Exposed Stack">
-
-</section>
-
-<!-- ================= BODY ================= -->
-<section class="content">
-
-  <p>Coming soon - Gallery and Products.</p>
-  <p>“A tried stone, a precious cornerstone, a sure foundation.”</p>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-
-  <img src="png/mylogo.png" alt="Logo">
-
-</footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>
