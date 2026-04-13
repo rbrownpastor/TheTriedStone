@@ -1,62 +1,65 @@
-/* RESET */
+/* ========================= RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
   font-family: 'Open Sans', sans-serif;
   background: #f5f1e8;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .header {
   background: #1B5E20;
   color: white;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 15px 20px;
   position: relative;
 }
 
-/* LEFT */
 .header-left {
   font-weight: bold;
 }
 
-/* CENTER */
 .header-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
-  white-space: nowrap;
 }
 
-/* RIGHT */
 .header-right {
   position: relative;
-  font-size: 26px;
   cursor: pointer;
 }
 
-/* MENU */
+/* Dropdown menu */
 .menu {
   display: none;
   position: absolute;
   right: 0;
-  top: 35px;
+  top: 30px;
   background: white;
   color: black;
   min-width: 140px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
 }
 
 .menu a {
@@ -74,35 +77,43 @@ body {
   display: block;
 }
 
-/* CAROUSEL */
+/* =========================
+   CAROUSEL
+========================= */
 .carousel {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  padding: 15px;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
+/* FIX IMAGE SIZE HERE */
 .carousel img {
-  width: 66%;
-  height: 440px;
+  width: 160px;
+  height: 80px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
 }
 
-/* CONTENT */
+.carousel img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   CONTENT
+========================= */
 .content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
   text-align: center;
-  padding: 30px 15px;
 }
 
-/* FOOTER */
-.footer {
-  background: #43A047;
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-}
-
-.footer img {
-  height: 35px;
+.content p {
+  margin-bottom: 15px;
+  font-size: 16px;
 }
