@@ -13,7 +13,7 @@ body {
 
 /* HEADER */
 .header {
-  background: #5a3e2b;
+  background: #43A047;
   color: white;
 
   display: flex;
@@ -76,27 +76,17 @@ body {
 
 /* CAROUSEL */
 .carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-track {
   display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
-  padding: 20px 0;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
 }
 
-/* ALL IMAGES */
 .carousel img {
-  flex: 0 0 60%;   /* center image size */
-  height: 300px;
+  width: 66%;
+  height: 440px;
   object-fit: cover;
-  border-radius: 10px;
-  opacity: 0.6;
-  transform: scale(0.9);
-  transition: all 0.5s ease;
+  border-radius: 8px;
 }
 
 /* CENTER IMAGE */
