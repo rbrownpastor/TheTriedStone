@@ -13,7 +13,7 @@ body {
 
 /* HEADER */
 .header {
-  background: #43A047;
+  background: #1B5E20;
   color: white;
 
   display: flex;
@@ -89,27 +89,6 @@ body {
   border-radius: 8px;
 }
 
-/* CENTER IMAGE */
-.carousel img.active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* SIDE BUTTONS */
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
 /* CONTENT */
 .content {
   text-align: center;
@@ -118,7 +97,7 @@ body {
 
 /* FOOTER */
 .footer {
-  background: #5a3e2b;
+  background: #43A047;
   display: flex;
   justify-content: center;
   padding: 15px;
