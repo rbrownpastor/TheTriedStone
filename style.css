@@ -76,18 +76,49 @@ body {
 
 /* CAROUSEL */
 .carousel {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-.carousel img {
-  width: 33%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+  padding: 20px 0;
 }
+
+/* ALL IMAGES */
+.carousel img {
+  flex: 0 0 60%;   /* center image size */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+}
+
+/* CENTER IMAGE */
+.carousel img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* SIDE BUTTONS */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* CONTENT */
 .content {
